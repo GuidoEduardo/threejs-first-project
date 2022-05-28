@@ -5,15 +5,55 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Three.js project</title>
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
             body {
                 overflow: hidden;
                 margin: 0;
                 padding: 0;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+
+                font-family: 'Inter', sans-serif;
+                font-size: 10px;
+            }
+
+            .description {
+                font-weight: 300;
+                font-size: 2em;
+                padding: 0.8em;
+
+                position: absolute;
+                z-index: 1;
+                left: 0;
+                bottom: 0;
+            }
+
+            .description h2 {
+                font-weight: 600;
+                line-height: 0.5em;
+
+                margin: 0;         
+            }
+
+            .cube {
+                position: absolute;
+                z-index: 0;
             }
         </style>
     </head>
     
     <body>
-        <script type="module" src="bundle.js"></script>
+        <div class="description">
+            <h2>Cube 3D</h2>
+            <p>It's an example of a cube renderer in ThreeJS.</p>
+        </div>
+        <div class="cube">
+            <script type="module" src="bundle.js"></script>
+        </div>
     </body>
 </html>
